@@ -8,7 +8,7 @@
         {
             "title": "DNS Manager",
             "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/dns_manager.png",
-            "version" "BETA-1.0"
+            "version": "BETA-1.0"
         }
     ]
 }
