@@ -2,11 +2,13 @@
     "services": [
         {
             "title": "Password Manager",
-            "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/password_manaer.png"
+            "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/password_manaer.png",
+            "version": "1.0"
         },
         {
             "title": "DNS Manager",
-            "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/dns_manager.png"
+            "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/dns_manager.png".
+            "version" "BETA-1.0"
         }
     ]
 }
