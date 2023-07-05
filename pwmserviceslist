@@ -1,0 +1,12 @@
+{
+    "services": [
+        {
+            "title": "Password Manager",
+            "image": ""
+        }
+        {
+            "title": "DNS Manager",
+            "image": ""
+        }
+    ]
+}
