@@ -6,7 +6,7 @@
         },
         {
             "title": "DNS Manager",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/Maploop/DataCenter/main/dns_manager.png"
         }
     ]
 }
