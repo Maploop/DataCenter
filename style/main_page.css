@@ -23,10 +23,16 @@ button {
 
 .item-content {
     padding: 1rem 0;
+    margin-left: 2%;
 }
 
 .item-image {
     padding: 1rem 0;
+    margin-left: 2%;
+}
+
+.item-image img {
+    border-radius: 10px;
 }
 
 .item {
