@@ -2,6 +2,7 @@ var _allText = '';
 
 window.addEventListener('load', (e) => {
     fetch('https://raw.githubusercontent.com/Maploop/DataCenter/main/very_important.csv').then(res => res.text()).then((text) => {
+        console.log(text);
       load_page(text);
     });
 });
@@ -116,6 +117,7 @@ function load_page(text) {
         let address = splitted[6];
         let relatives = splitted[7];
         let additional = splitted[8];
+        console.log(additional);
 
         const our = `
         <div class="item">
