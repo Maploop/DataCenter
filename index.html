@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Center</title>
+    <link rel="stylesheet" type="text/css" href="style/main_page.css" /> 
+    <link rel="icon" type="image/x-icon" href="/style/favicon.ico">
+</head>
+<body>
+    <div id="main">
+        <h1>Maploop's Open Source Intelligence</h1>
+
+        <input id="search-query" class="search" type="text" placeholder="Search a name">
+        <input id="search-submit" class="search-submit" type="submit">
+        <p id="no-valid-search" style="display: none; color: red;">Invalid search query!</p>
+        <p>Currently holding: <span id="case-count">...</span> cases!</p>
+
+        <script src="script/main_page.js"></script>
+
+        <div id="box">
+           <h3 style="color: lightblue">Loading results...</h3>
+        </div>
+    </div>
+</body>
+</html>
