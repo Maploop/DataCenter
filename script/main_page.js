@@ -61,9 +61,17 @@ function commence_search(keyword) {
         let address = splitted[6];
         let relatives = splitted[7];
         let additional = splitted[8];
+        let image = splitted[9];
+        if (!image || image == "N/A") {
+            image = "https://cdn.discordapp.com/attachments/947500949214220328/1194997321801416734/noimage.png?ex=65b262fb&is=659fedfb&hm=1457e078225262d7cf5fb622db0412d749927e4506c70bd92614c485836bceac&";
+        }
 
         const our = `
         <div class="item">
+                <div class="item-image">
+                    <img width=400 height=300 alt="Picture" src="${image}">
+                </div>
+                <div class="item-content">
                 <h4 class="item-title">${name}</h4>
                 <p class="item-phone">Phone Number: >${phone}</p>
                 <p class="item-instagram">Instagram: >${instagram}</p>
@@ -73,6 +81,7 @@ function commence_search(keyword) {
                 <p class="item-address">Address: >${address}</p>
                 <p class="item-other_relatives">Other Relatives: >${relatives}</p>
                 <p class="item-additional_information">Additional INFO: >${additional}</p>
+                </div>
             </div>`
 
        html += our;
@@ -117,10 +126,18 @@ function load_page(text) {
         let address = splitted[6];
         let relatives = splitted[7];
         let additional = splitted[8];
-        console.log(additional);
+        let image = splitted[9];
+        console.log(image);
+        if (!image || image == "N/A") {
+            image = "https://cdn.discordapp.com/attachments/947500949214220328/1194997321801416734/noimage.png?ex=65b262fb&is=659fedfb&hm=1457e078225262d7cf5fb622db0412d749927e4506c70bd92614c485836bceac&";
+        }
 
         const our = `
         <div class="item">
+                <div class="item-image">
+                    <img width=400 height=300 alt="Picture" src="${image}">
+                </div>
+                <div class="item-content">
                 <h4 class="item-title">${name}</h4>
                 <p class="item-phone">Phone Number: >${phone}</p>
                 <p class="item-instagram">Instagram: >${instagram}</p>
@@ -130,6 +147,7 @@ function load_page(text) {
                 <p class="item-address">Address: >${address}</p>
                 <p class="item-other_relatives">Other Relatives: >${relatives}</p>
                 <p class="item-additional_information">Additional INFO: >${additional}</p>
+                </div>
             </div>`
 
        html += our;

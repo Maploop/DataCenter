@@ -21,11 +21,19 @@ button {
     border-radius: 20px;
 }
 
+.item-content {
+    padding: 1rem 0;
+}
+
+.item-image {
+    padding: 1rem 0;
+}
+
 .item {
+    display: flex;
     background-color: black;
     text-align: left;
     margin-top: 1%;
-    padding: 1rem 12rem;
     border-radius: 10px;
 }
 
