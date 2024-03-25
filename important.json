@@ -8,15 +8,19 @@
             "social_security_number": "2150771519",
             "mom": "attachment$https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/IMG_20201111_000639_219.jpg",
             "dad": "attachment$https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/IMG-20210408-WA0004.jpg",
-            "other_pictures": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/high_lokht.jpg?raw=true"
+            "picture_1": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/high_lokht.jpg?raw=true",
+            "picture_2": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/hb1.png?raw=true",
+            "picture_3": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/hb123.png?raw=true",
+            "picture_4": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/hb13.png?raw=true",
+            "picture_5": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/hb68.png?raw=true"
         }
     },
     {
         "label": "Mehti Hoseini",
-        "image_icon": "NOIMAGE",
+        "image_icon": "https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/image.png",
         "data": {
             "full_name": "Mehti Hoseini",
-            "picutre": "https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/image.png"
+            "picutre": "attachment$https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/image.png"
         }
     },
     {
@@ -28,8 +32,8 @@
             "email_1": "mihailkuzmince9739@rambler.ru",
             "email_2": "homayoon.py@gmail.com",
             "discord_alt": "@drillruzz",
-            "twitch": "https://www.twitch.tv/xrwin_",
-            "spotify": "https://open.spotify.com/user/313ebre66fdweqi6jmk7qqlftbcu",
+            "twitch": "link$https://www.twitch.tv/xrwin_",
+            "spotify": "link$https://open.spotify.com/user/313ebre66fdweqi6jmk7qqlftbcu",
             "address": "مازندران - خیابان نور - شهدای 28 سر کوچه"
         }
     },

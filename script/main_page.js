@@ -57,7 +57,10 @@ function commence_search(keyword) {
         
         var data = "";
         Object.keys(ts['data']).forEach((key) => {
-            if (ts['data'][key].startsWith("attachment$")) {
+            if (ts['data'][key].startsWith("link$")) {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">${strip_this(ts['data'][key])}</a></p>`;
+            }
+            else if (ts['data'][key].startsWith("attachment$")) {
                 data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">Click to view image in a new tab</a></p>`;
             } else {
                 data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-white">${ts['data'][key]}</a></p>`;
@@ -115,7 +118,10 @@ function load_page(json) {
         
         var data = "";
         Object.keys(ts['data']).forEach((key) => {
-            if (ts['data'][key].startsWith("attachment$")) {
+            if (ts['data'][key].startsWith("link$")) {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">${strip_this(ts['data'][key])}</a></p>`;
+            }
+            else if (ts['data'][key].startsWith("attachment$")) {
                 data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">Click to view image in a new tab</a></p>`;
             } else {
                 data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-white">${ts['data'][key]}</a></p>`;
