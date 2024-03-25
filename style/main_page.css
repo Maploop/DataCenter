@@ -102,3 +102,17 @@ button {
 .item-additional_information {
     color:rgb(0, 151, 201);
 }
+
+.item-link {
+    font-weight: unset;
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.item-link:hover {
+    font-weight: bold;
+}
+
+.item-white {
+    color: whitesmoke;
+}

@@ -1,7 +1,7 @@
-var _allText = '';
+var j_object;
 
 window.addEventListener('load', (e) => {
-    fetch('https://raw.githubusercontent.com/Maploop/DataCenter/main/very_important.csv').then(res => res.text()).then((text) => {
+    fetch('./important.json').then(res => res.json()).then((text) => {
         console.log(text);
       load_page(text);
     });
@@ -42,51 +42,41 @@ document.getElementById('search-submit').onclick = (e) => {
  */
 function commence_search(keyword) {
     document.querySelector("#box").innerHTML = `<h3 style="color: lightblue">Loading results...</h3>`;
-    let lines = _allText.split('\n');
 
     var html = ``;
     let resCount = 0;
-    for (let index in lines) {
-        if (index == 0) continue;
-        let line = lines[index];
-
-        let splitted = line.split(',');
-        let name = splitted[0];
-        if (!name.toLowerCase().includes(keyword.toLowerCase())) continue;
-        let phone = splitted[1];
-        let instagram = splitted[2];
-        let telegram = splitted[3];
-        let mom = splitted[4];
-        let dad = splitted[5];
-        let address = splitted[6];
-        let relatives = splitted[7];
-        let additional = splitted[8];
-        let image = splitted[9];
-        if (!image || image == "N/A") {
-            image = "https://cdn.discordapp.com/attachments/947500949214220328/1194997321801416734/noimage.png?ex=65b262fb&is=659fedfb&hm=1457e078225262d7cf5fb622db0412d749927e4506c70bd92614c485836bceac&";
+    for (let i = 0; i < j_object.length; i++) {
+        let ts = j_object[i];
+        
+        let label = ts['label'];
+        if (!label.toLowerCase().includes(keyword.toLowerCase())) continue;
+        let icon = ts['image_icon'];
+        if (icon == "NOIMAGE") {
+            icon = "./thumbnail.png";
         }
-
+        
+        var data = "";
+        Object.keys(ts['data']).forEach((key) => {
+            if (ts['data'][key].startsWith("attachment$")) {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">Click to view image in a new tab</a></p>`;
+            } else {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-white">${ts['data'][key]}</a></p>`;
+            }
+        });
+ 
         const our = `
         <div class="item">
-                <div class="item-image">
-                    <img width=400 height=300 alt="Picture" src="${image}">
-                </div>
-                <div class="item-content">
-                <h4 class="item-title">${name}</h4>
-                <p class="item-phone">Phone Number: >${phone}</p>
-                <p class="item-instagram">Instagram: >${instagram}</p>
-                <p class="item-telegram">Telegram: >${telegram}</p>
-                <p class="item-mom">Mom: >${mom}</p>
-                <p class="item-dad">Dad:>${dad}</p>
-                <p class="item-address">Address: >${address}</p>
-                <p class="item-other_relatives">Other Relatives: >${relatives}</p>
-                <p class="item-additional_information">Additional INFO: >${additional}</p>
-                </div>
-            </div>`
+        <div class="item-image">
+            <img width=400 height=300 alt="Picture" src="${icon}">
+        </div>
+        <div class="item-content">
+        <h4 class="item-title">${label}</h4>
+        ${data}
+        </div>
+    </div>
+        `
 
-       html += our;
-
-        console.log(name);
+        html += our;
         resCount++;
     }
 
@@ -100,61 +90,66 @@ function commence_search(keyword) {
 
 /**
  * 
- * @param {string} text 
+ * @param {JSONObject} text 
  */
-function load_page(text) {
-    let lines = text.split('\n');
+function load_page(json) {
+    let lines = json.length;
+    json.co
 
     var html = `<h3 style="color: red">Whoops! Looks like there are no results!</h3>
-    <h3 style="color: red">Error: CSV_FILE_NULLIFIED</h3>`;
-    let resCount = lines.length - 1;
+    <h3 style="color: red">Error: DATA_NULLIFIED</h3>`;
+    let resCount = lines;
     if (resCount > 0) {
         html = '';
     }
     document.querySelector("#case-count").innerHTML = resCount;
-    for (let index in lines) {
-        if (index == 0) continue;
-        let line = lines[index];
 
-        let splitted = line.split(',');
-        let name = splitted[0];
-        let phone = splitted[1];
-        let instagram = splitted[2];
-        let telegram = splitted[3];
-        let mom = splitted[4];
-        let dad = splitted[5];
-        let address = splitted[6];
-        let relatives = splitted[7];
-        let additional = splitted[8];
-        let image = splitted[9];
-        console.log(image);
-        if (!image || image == "N/A") {
-            image = "https://cdn.discordapp.com/attachments/947500949214220328/1194997321801416734/noimage.png?ex=65b262fb&is=659fedfb&hm=1457e078225262d7cf5fb622db0412d749927e4506c70bd92614c485836bceac&";
+    for (let i = 0; i < json.length; i++) {
+        let ts = json[i];
+        
+        let label = ts['label'];
+        let icon = ts['image_icon'];
+        if (icon == "NOIMAGE") {
+            icon = "./thumbnail.png";
         }
-
+        
+        var data = "";
+        Object.keys(ts['data']).forEach((key) => {
+            if (ts['data'][key].startsWith("attachment$")) {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-link" href="${strip_this(ts['data'][key])}" target="_blank">Click to view image in a new tab</a></p>`;
+            } else {
+                data += `<p class="item-mom">${make_string_normal(key)}: <a class="item-white">${ts['data'][key]}</a></p>`;
+            }
+        });
+ 
         const our = `
         <div class="item">
-                <div class="item-image">
-                    <img width=400 height=300 alt="Picture" src="${image}">
-                </div>
-                <div class="item-content">
-                <h4 class="item-title">${name}</h4>
-                <p class="item-phone">Phone Number: >${phone}</p>
-                <p class="item-instagram">Instagram: >${instagram}</p>
-                <p class="item-telegram">Telegram: >${telegram}</p>
-                <p class="item-mom">Mom: >${mom}</p>
-                <p class="item-dad">Dad:>${dad}</p>
-                <p class="item-address">Address: >${address}</p>
-                <p class="item-other_relatives">Other Relatives: >${relatives}</p>
-                <p class="item-additional_information">Additional INFO: >${additional}</p>
-                </div>
-            </div>`
+        <div class="item-image">
+            <img width=400 height=300 alt="Picture" src="${icon}">
+        </div>
+        <div class="item-content">
+        <h4 class="item-title">${label}</h4>
+        ${data}
+        </div>
+    </div>
+        `
 
-       html += our;
-
-        console.log(name);
+        html += our;
     }
 
     document.querySelector("#box").innerHTML = html;
-    _allText = text;
+    j_object = json;
+}
+
+/**
+ * 
+ * @param {string} str 
+ * @returns string
+ */
+function make_string_normal(str) {
+    return str.replaceAll("_", " ");
+}
+
+function strip_this(str) {
+    return str.replace("attachment$", "");
 }

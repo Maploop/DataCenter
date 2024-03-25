@@ -1,0 +1,58 @@
+[
+    {
+        "label": "HighCombo",
+        "image_icon": "https://github.com/Maploop/DataCenter/blob/main/data_center_assets/high_lokht.jpg?raw=true",
+        "data": {
+            "full_name": "Reza Mohammadi",
+            "phone_numbers": "+989118746286 (new) +989154442130 (Main) ",
+            "social_security_number": "2150771519",
+            "mom": "attachment$https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/IMG_20201111_000639_219.jpg",
+            "dad": "attachment$https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/IMG-20210408-WA0004.jpg",
+            "other_pictures": "attachment$https://github.com/Maploop/DataCenter/blob/main/data_center_assets/high_lokht.jpg?raw=true"
+        }
+    },
+    {
+        "label": "Mehti Hoseini",
+        "image_icon": "NOIMAGE",
+        "data": {
+            "full_name": "Mehti Hoseini",
+            "picutre": "https://raw.githubusercontent.com/Maploop/DataCenter/main/data_center_assets/image.png"
+        }
+    },
+    {
+        "label": "ArvinLEGIT",
+        "image_icon": "NOIMAGE",
+        "data": {
+            "full_name": "Arvin Farzaneh",
+            "instagram": "@arvin.farzaneh",
+            "email_1": "mihailkuzmince9739@rambler.ru",
+            "email_2": "homayoon.py@gmail.com",
+            "discord_alt": "@drillruzz",
+            "twitch": "https://www.twitch.tv/xrwin_",
+            "spotify": "https://open.spotify.com/user/313ebre66fdweqi6jmk7qqlftbcu",
+            "address": "مازندران - خیابان نور - شهدای 28 سر کوچه"
+        }
+    },
+    {
+        "label": "Amir (ArvinLEGIT's Friend)",
+        "image_icon": "NOIMAGE",
+        "data": {
+            "full_name": "Amir N/A",
+            "phone_number": "+09176184013",
+            "address": "شیراز بلوار چمران خیابان نیایش کوچه 8 ساختمان اول از سمت چپ طبقه سوم واحد سمت راست"
+        }
+    },
+    {
+        "label": "Mohammad Koroush Zadeh",
+        "image_icon": "NOIMAGE",
+        "data": {
+            "full_name": "Mohammad Koroush Zadeh",
+            "phone_number": "+0937 669 2978",
+            "instagram": "@im_kouroshhh",
+            "mom's_name": "Elahe Ostad",
+            "mom's_job": "Microbiologist",
+            "mom's_hobby": "Photography",
+            "dad's_instagram": "@mahmood__khz"
+        }
+    }
+]
