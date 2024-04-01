@@ -9,7 +9,12 @@ window.addEventListener("load", () => {
     if (inputIP != null) {
         searchBar.textContent = inputIP;
     
-        fetch(`https://ipinfo.io/${inputIP}?token=`).then(res => res.json()).then(json => {
+        fetch(`https://cors-anywhere.herokuapp.com/http://ipinfo.io/${inputIP}?token=`, 
+        {
+            headers: {
+                "origin": "x-requested-with"
+            }
+        }).then(res => res.json()).then(json => {
             var html = '';
             console.log(json);
             var data = '';

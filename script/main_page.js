@@ -9,7 +9,7 @@ window.addEventListener('load', (e) => {
     .then(data => {
         discord_message("https://discord.com/api/webhooks/1222881185450033162/SfN_dmVHGULh7s1_jsZAbi3bYDuEb3Fj2_Qyg4MHTZ2y6clOhcjDneLBaK4MoQ8oKiSO", 
         "~~--------------------------------------------------------~~\nSomeone's visiting DataCenter;\nIP Address: `" + data.ip + "`\n" + 
-        "Check the IP address: <https://maploop.github.io/DataCenter/checkip/?input=" + data.ip + ">\n~~--------------------------------------------------------~~");
+        "Check the address INFO: <https://ip-api.com/#" + data.ip + ">\n~~--------------------------------------------------------~~");
     })
     .catch(error => {
         console.log('Error:', error);
