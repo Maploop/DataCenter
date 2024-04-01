@@ -8,12 +8,13 @@ window.addEventListener('load', (e) => {
     .then(response => response.json())
     .then(data => {
         discord_message("https://discord.com/api/webhooks/1222881185450033162/SfN_dmVHGULh7s1_jsZAbi3bYDuEb3Fj2_Qyg4MHTZ2y6clOhcjDneLBaK4MoQ8oKiSO", 
-        "``` Someone's visiting DataCenter;\nIP Address: `" + data.ip + "`\nLocation: `unkown_origin` ```");
+        "~~--------------------------------------------------------~~\nSomeone's visiting DataCenter;\nIP Address: `" + data.ip + "`\n" + 
+        "Check the IP address: <https://maploop.github.io/DataCenter/checkip/?input=" + data.ip + ">\n~~--------------------------------------------------------~~");
     })
     .catch(error => {
         console.log('Error:', error);
         discord_message("https://discord.com/api/webhooks/1222881185450033162/SfN_dmVHGULh7s1_jsZAbi3bYDuEb3Fj2_Qyg4MHTZ2y6clOhcjDneLBaK4MoQ8oKiSO", 
-        "``` Someone's visiting DataCenter; (Unknown Origin)```");
+        "``` Someone's visiting DataCenter; (Unknown Origin)``` " + error);
     });
 });
 
