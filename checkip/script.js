@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     if (inputIP != null) {
         searchBar.textContent = inputIP;
     
-        fetch("https://ip-api.com/json/" + inputIP).then(res => res.json()).then(json => {
+        fetch(`https://ipinfo.io/${inputIP}?token=`).then(res => res.json()).then(json => {
             var html = '';
             console.log(json);
             var data = '';
@@ -18,9 +18,8 @@ window.addEventListener("load", () => {
             data += `<p class="item-mom">Country: <a class="item-white"> ${json["country"]}</a></p>`;
             data += `<p class="item-mom">City: <a class="item-white"> ${json["city"]}</a></p>`;
             data += `<p class="item-mom">ISP: <a class="item-white"> ${json["isp"]}</a></p>`;
-            data += `<p class="item-mom">ZIP: <a class="item-white"> ${json["zip"]}</a></p>`;
-            data += `<p class="item-mom">Latitude: <a class="item-white"> ${json["lat"]}</a></p>`;
-            data += `<p class="item-mom">Longtitude: <a class="item-white"> ${json["lon"]}</a></p>`;
+            data += `<p class="item-mom">ZIP: <a class="item-white"> ${json["postal"]}</a></p>`;
+            data += `<p class="item-mom">Lat,Lon: <a class="item-white"> ${json["loc"]}</a></p>`;
             data += `<p class="item-mom">Organization: <a class="item-white"> ${json["org"]}</a></p>`;
          
                 const our = `
