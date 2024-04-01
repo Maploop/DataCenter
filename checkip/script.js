@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     if (inputIP != null) {
         searchBar.textContent = inputIP;
     
-        fetch("http://ip-api.com/json/" + inputIP).then(res => res.json()).then(json => {
+        fetch("https://ip-api.com/json/" + inputIP).then(res => res.json()).then(json => {
             var html = '';
             console.log(json);
             var data = '';
