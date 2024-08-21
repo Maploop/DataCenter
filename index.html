@@ -4,23 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelligence Center</title>
-    <link rel="stylesheet" type="text/css" href="style/main_page.css" /> 
+    <link rel="stylesheet" type="text/css" href="ARCHIVE/cyberpunk.css" /> 
+    <link rel="stylesheet" type="text/css" href="ARCHIVE/self.css" /> 
     <link rel="icon" type="image/x-icon" href="/DataCenter/style/favicon.ico">
 </head>
 <body>
-    <div id="main">
-        <h1>Maploop's Open Source Intelligence</h1>
+    <div class="cyber-razor-bottom bg-dark pt-0 pl-8 pb-4">
+        <img class="mt-3" src="ARCHIVE/icon/full_text.png" width="900" height="80">
+        <br>
+        <span class="cyber-att-2">Provided by Maploop</span>
+        <button onclick="window.open('https://discord.gg/ktsWETN7an')" class="cyber-button-small bg-red fg-white">
+            DISCORD
+            <span class="glitchtext">Some edgy shit</span>
+            <span class="tag fg-white">LNK</span>
+        </button>
+        <button class="cyber-button-small bg-red fg-white">
+            LEGAL
+            <span class="glitchtext">Some edgy shit</span>
+            <span class="tag fg-white">CD</span>
+        </button>
+    </div>
+    <div class="mt-5 row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="row">
+                <!-- <div class="col-1"></div> -->
+                <span class="fg-red f-x2-2">Available Cases: <span id="case-count">...</span> </span>
+            </div>
+            <div class="row">
+                <!-- <div class="col-1"></div> -->
+                <div class="col-2">
+                    <div class="mt-5 cyber-input ac-red fg-white">
+                        <input id="search-query" type="text" placeholder="Search Query" />
+                    </div>
+                </div>
+                <div class="col-1">
+                    <button id="search-submit" class="mt-5 ml-10 cyber-button-small bg-red fg-white">
+                        Search
+                        <span class="glitchtext">Some edgy shit</span>
+                        <span class="tag fg-white">CD</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <span id="no-valid-search" class="hide mt-5 mb-5 cyber-att">ATTENTION: Invalid Search Query</span>
+            </div>
+    
+            <script src="ARCHIVE/script/Main.js"></script>
+    
+            <div class="mt-5 mb-10" id="box">
+                <span class="cyber-att fg-cyan">ATTENTION: Loading Results..</span>
+            </div>
 
-        <input id="search-query" class="search" type="text" placeholder="Search a name">
-        <input id="search-submit" class="search-submit" type="submit">
-        <p id="no-valid-search" style="display: none; color: red;">Invalid search query!</p>
-        <p>Currently holding: <span id="case-count">...</span> cases!</p>
-
-        <script src="script/main_page.js"></script>
-
-        <div id="box">
-           <h3 style="color: lightblue">Loading results...</h3>
         </div>
+    </div>
+        <div class="col-1"></div>
     </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 [
     {
-        "label": "HighCombo",
+        "label": "HighCombo Reza Mohammadi",
         "image_icon": "https://github.com/Maploop/DataCenter/blob/main/data_center_assets/high_lokht.jpg?raw=true",
         "data": {
+			"nickname": "HighCombo",
             "full_name": "Reza Mohammadi",
             "phone_numbers": "+98 9118746286 (new) +98 9154442130 (Main) ",
             "social_security_number": "2150771519",
@@ -27,6 +28,7 @@
         "label": "xRwin (ArvinLEGIT)",
         "image_icon": "NOIMAGE",
         "data": {
+			"nickname": "xRwin (ArvinLEGIT)",
             "full_name": "Arvin Farzaneh",
             "instagram": "@arvin.farzaneh",
             "email_1": "mihailkuzmince9739@rambler.ru",
