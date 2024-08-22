@@ -60,5 +60,25 @@
             "mom's_hobby": "Photography",
             "dad's_instagram": "@mahmood__khz"
         }
-    }
+    },
+	{
+		"label": "Parsa Gharib",
+		"image_icon": "NOIMAGE",
+		"data": {
+			"full_name": "Parsa Gharib",
+			"instagram": "@parsa_gharib10"
+		}
+	},
+	{
+		"label": "Alireza Bavafa",
+		"image_icon": "NOIMAGE",
+		"data": {
+			"full_name": "Alireza Bavafa",
+			"phone_number": "+98 915 691 4366",
+			"instagram": "@alireza_bvf7 & @_ev.alireza_",
+			"telegram": "@amirr_ghf",
+			"mom": "@maliheh_hkm",
+			"cousins": "@younes_bvf & @fateme__bvf"
+		}
+	}
 ]
