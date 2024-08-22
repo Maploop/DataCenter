@@ -1,8 +1,12 @@
 var j_object;
 
 // VARIABLES
-const _INT_CONFIG_ColumnsInEachRow = 3;
+const _INT_CONFIG_ColumnsInEachRow = 5;
 const _INT_CONFIG_MaxRows = -1;
+const _INT_CONFIG_CardBackgroundColor = "red";
+const _INT_CONFIG_CardForegroundColor = "white";
+const _INT_CONFIG_CardLinkColor = "yellow";
+const _INT_CONFIG_ThumbnailIcon = "./ARCHIVE/icon/tn2.png";
 
 // LOCAL UTILITY FUNCTIONS
 function BAD_Notif(what) {}
@@ -74,7 +78,7 @@ function commence_search(keyword) {
         if (!label.toLowerCase().includes(keyword.toLowerCase())) continue;
         let icon = ts['image_icon'];
         if (icon == "NOIMAGE") {
-            icon = "./thumbnail.png";
+            icon = _INT_CONFIG_ThumbnailIcon;
         }
         
         var data = "";
@@ -82,12 +86,12 @@ function commence_search(keyword) {
             if (ts['data'][key].startsWith("link$")) {
                 var keyNorm = make_string_normal(key);
                 var stripped = strip_this(ts['data'][key]).replace("link$", "");
-                data += `<label>${keyNorm}: <a class="fg-yellow" href="${stripped}">${stripped}</a></label>`;
+                data += `<label>${keyNorm}: <a class="fg-${_INT_CONFIG_CardLinkColor}" href="${stripped}">${stripped}</a></label>`;
             }
             else if (ts['data'][key].startsWith("attachment$")) {
                 var keyNorm = make_string_normal(key);
                 var stripped = strip_this(ts['data'][key]);
-                data += `<label>${keyNorm}: <a class="fg-yellow" href="${stripped}">Attachment</a></label>`;
+                data += `<label>${keyNorm}: <a class="fg-${_INT_CONFIG_CardLinkColor}" href="${stripped}">Attachment</a></label>`;
             } else {
                 var keyNorm = make_string_normal(key);
                 var stripped = ts['data'][key];
@@ -95,7 +99,7 @@ function commence_search(keyword) {
             }
         });
 
-        var needsNewRow = _col_count >= 3;
+        var needsNewRow = _col_count >= _INT_CONFIG_ColumnsInEachRow;
         let ourNewData = ``;
         console.log(needsNewRow || _first);
         if (needsNewRow || _first) {
@@ -104,7 +108,7 @@ function commence_search(keyword) {
             <div class="row">
 
             <div class="col-4">
-                <div class="cyber-tile fg-white bg-dark mt-4 mr-4 inline-block vt-bot">
+                <div class="cyber-tile-small fg-${_INT_CONFIG_CardForegroundColor} bg-${_INT_CONFIG_CardBackgroundColor} mt-4 mr-4 inline-block vt-bot">
                     <img alt="IMAGE" src="${icon}" width="200" height="200">
                     ${data}
                 </div>
@@ -116,7 +120,7 @@ function commence_search(keyword) {
         } else {
             ourNewData = `
             <div class="col-4">
-                <div class="cyber-tile fg-white bg-dark mt-4 mr-4 inline-block vt-bot">
+                <div class="cyber-tile-small fg-${_INT_CONFIG_CardForegroundColor} bg-${_INT_CONFIG_CardBackgroundColor} mt-4 mr-4 inline-block vt-bot">
                     <img alt="IMAGE" src="${icon}" width="200" height="200">
                     ${data}
                 </div>
@@ -161,7 +165,7 @@ function load_page(json) {
         let label = ts['label'];
         let icon = ts['image_icon'];
         if (icon == "NOIMAGE") {
-            icon = "./thumbnail.png";
+            icon = _INT_CONFIG_ThumbnailIcon;
         }
         
         var data = "";
@@ -169,12 +173,12 @@ function load_page(json) {
             if (ts['data'][key].startsWith("link$")) {
                 var keyNorm = make_string_normal(key);
                 var stripped = strip_this(ts['data'][key]).replace("link$", "");
-                data += `<label>${keyNorm}: <a class="fg-yellow" href="${stripped}">${stripped}</a></label>`;
+                data += `<label>${keyNorm}: <a class="fg-${_INT_CONFIG_CardLinkColor}" href="${stripped}">${stripped}</a></label>`;
             }
             else if (ts['data'][key].startsWith("attachment$")) {
                 var keyNorm = make_string_normal(key);
                 var stripped = strip_this(ts['data'][key]);
-                data += `<label>${keyNorm}: <a class="fg-yellow" href="${stripped}">Attachment</a></label>`;
+                data += `<label>${keyNorm}: <a class="fg-${_INT_CONFIG_CardLinkColor}" href="${stripped}">Attachment</a></label>`;
             } else {
                 var keyNorm = make_string_normal(key);
                 var stripped = ts['data'][key];
@@ -182,7 +186,7 @@ function load_page(json) {
             }
         });
 
-        var needsNewRow = _col_count >= 3;
+        var needsNewRow = _col_count >= _INT_CONFIG_ColumnsInEachRow;
         let ourNewData = ``;
         console.log(needsNewRow || _first);
         if (needsNewRow || _first) {
@@ -191,7 +195,7 @@ function load_page(json) {
             <div class="row">
 
             <div class="col-4">
-                <div class="cyber-tile fg-white bg-dark mt-4 mr-4 inline-block vt-bot">
+                <div class="cyber-tile-small fg-${_INT_CONFIG_CardForegroundColor} bg-${_INT_CONFIG_CardBackgroundColor} mt-4 mr-4 inline-block vt-bot">
                     <img alt="IMAGE" src="${icon}" width="200" height="200">
                     ${data}
                 </div>
@@ -203,7 +207,7 @@ function load_page(json) {
         } else {
             ourNewData = `
             <div class="col-4">
-                <div class="cyber-tile fg-white bg-dark mt-4 mr-4 inline-block vt-bot">
+                <div class="cyber-tile-small fg-${_INT_CONFIG_CardForegroundColor} bg-${_INT_CONFIG_CardBackgroundColor} mt-4 mr-4 inline-block vt-bot">
                     <img alt="IMAGE" src="${icon}" width="200" height="200">
                     ${data}
                 </div>
