@@ -39,6 +39,7 @@
     --red: #ff003c;
     --blue: #136377;
     --green: #446d44;
+    --lime: #00ff00;
     --purple: purple;
     --black: #000;
     --white: #fff;
@@ -192,6 +193,10 @@ body
 .fg-dark { --fg: var(--dark); color: var(--dark) !important; }
 .bg-dark { --bg: var(--dark); background-color: var(--dark); }
 .ac-dark { --ac: var(--dark); }
+
+.fg-lime { --fg: var(--lime); color: var(--lime) !important; }
+.bg-lime { --bg: var(--lime); background-color: var(--lime); }
+.ac-lime { --ac: var(--lime); }
 /*#endregion*/
 
 /*#region razor*/

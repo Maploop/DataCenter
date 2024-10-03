@@ -51,7 +51,28 @@ See index.html for usage.
      flex-basis: 1;
      padding: var(--col-padding);
  }
- 
+
+.showup-text {
+ white-space: nowrap !important;
+ overflow: hidden !important;
+ border-bottom: 5px solid greenyellow !important;
+ animation: animate 2s linear forwards !important;
+}
+
+@keyframes animate {
+ 0% {
+  width: 0px !important;
+ }
+ 100% {
+  width: 100% !important;
+ }
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
  .col-1{max-width: calc(100% / 12 * 1 - (var(--col-padding) * 2));}
  .col-2{max-width: calc(100% / 12 * 2 - (var(--col-padding) * 2));}
  .col-3{max-width: calc(100% / 12 * 3 - (var(--col-padding) * 2));}
@@ -77,6 +98,10 @@ See index.html for usage.
          min-width: calc(100% - (var(--col-padding) * 2));
          width: calc(100% - (var(--col-padding) * 2));
      }
+ }
+
+ pre {
+    white-space: pre-warp;
  }
  
  /*#region margin padding*/
