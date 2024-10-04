@@ -73,6 +73,11 @@
     --radio-inner-size: 16px;
 }
 
+.border-cyan {
+    border: 1px solid var(--cyan) !important;
+    border-radius: 3px;
+ }
+
 html
 {
     font-size: var(--root-font-size);

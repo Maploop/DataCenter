@@ -1,5 +1,6 @@
 const console_e_holder = document.getElementById("ceholder");
 const console_element = ``;
+const terminal_speed = 30;
 
 const endpoints = [
   {
@@ -20,7 +21,7 @@ const endpoints = [
   },
   {
     cname: "V3_FORMAT_SKID1301",
-    url: "https://raw.githubusercontent.com/Maploop/DataCenter/refs/heads/main/personal/MX_0000x1.exe"
+    url: "https://raw.githubusercontent.com/Maploop/DataCenter/refs/heads/main/personal/"
   }
 ];
 
@@ -56,12 +57,6 @@ function start_checks() {
         }
     });
   }
-
-  // while (done < endpoints.length) {
-
-  // }
-  // con_say(`CHECKED ${endpoints.length} ENDPOINTS; TOTAL ${good} OK & ${bad} NOT OK.`);
-  // con_say(`DONE. PRESS <span class='bg-lime'>F5</span> TO RUN AGAIN.`);
 }
 
 function uuidv4() {
@@ -81,7 +76,7 @@ async function con_say(text) {
   var nextID = uuidv4();
   console_e_holder.innerHTML += `<div class="row"><span id="${nextID}" class="fg-red f-x1-5"></span></div>`
   var nextEL = document.getElementById(nextID);
-  con_print_e(nextEL, text, null, 40);
+  con_print_e(nextEL, text, null, terminal_speed);
 }
 
 function onComplete() {
@@ -97,10 +92,6 @@ function con_print_e(element, text, callback, speed) {
   onComplete = callback;
   selElement = element;
   timer = setInterval(on_tick, speed);
-}
-
-function queue(element, text, callback, speed) {
-  queueList.push({e: element, t: text, c: callback, s: speed});
 }
 
 function has_queued() {
