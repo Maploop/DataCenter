@@ -10,9 +10,21 @@
 			  "_INT_SOFTCODED_OutLogChannel": 1279501917629976667,
 			  "_INT_SOFTCODED_OperatingServer": 873642196916633651,
 			  "_INT_SOFTCODED_CDSPCommsChannel": 1282011378583867422,
-			  "_INT_SOFTCODED_ModelVersion": "1.1.3",
-			  "_INT_SOFTCODED_ModelLabel": "Flathead",
-        		  "_INT_SOFTCODED_StealthMode": false,
+			  "_INT_SOFTCODED_ModelVersion": "1.2.3",
+			  "_INT_SOFTCODED_ModelLabel": "RimoteMK1",
+			  "_INT_SOFTCODED_StealthMode": false,
+			  "_EXT_SOFTCODED_ModelDistro": "CtrlDeck"
+		  },
+		  "$4L554355_87U": {
+			  "_MRatDownloadURL": "https://raw.githubusercontent.com/Maploop/DataCenter/main/personal/MX_0000x1.exe",
+			  "_MRatSpoofedName": "SteamLibsManager.exe",
+			  "_INT_SOFTCODED_SecurityProtocol": "HIH",
+			  "_INT_SOFTCODED_OutLogChannel": 1279501917629976667,
+			  "_INT_SOFTCODED_OperatingServer": 873642196916633651,
+			  "_INT_SOFTCODED_CDSPCommsChannel": 1282011378583867422,
+			  "_INT_SOFTCODED_ModelVersion": "1.3.3",
+			  "_INT_SOFTCODED_ModelLabel": "RimoteMK1",
+			  "_INT_SOFTCODED_StealthMode": false,
 			  "_EXT_SOFTCODED_ModelDistro": "CtrlDeck"
 		  }
 	  },
