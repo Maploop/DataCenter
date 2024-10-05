@@ -22,6 +22,10 @@ const endpoints = [
   {
     cname: "V3_FORMAT_SKID1301",
     url: "https://raw.githubusercontent.com/Maploop/DataCenter/refs/heads/main/personal/"
+  },
+  {
+    cname: "RIMOTE_MK.1_B01THC",
+    url: "https://raw.githubusercontent.com/Maploop/DataCenter/refs/heads/main/MEOW.MRAT"
   }
 ];
 
