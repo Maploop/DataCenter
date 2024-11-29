@@ -40,7 +40,7 @@ window.addEventListener("load", (e) => {
                 "`\n" +
                 "Last Visited (BD): " +
                 (visitedTimeLast30Days
-                    ? `<t:${visitedTimeLast30Days}:F>`
+                    ? `<t:${Math.ceil(visitedTimeLast30Days / 1000)}:F>`
                     : "**Newcomer!**") +
                 "\n" +
                 "Check the address INFO: <https://ip-api.com/#" +
